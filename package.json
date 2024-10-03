@@ -6,9 +6,9 @@
         "server"
     ],
     "scripts": {
-        "start:client": "pnpm --prefix client run dev",
-        "start:server": "pnpm --prefix server run start",
-        "start:all": "concurrently \"pnpm run start:client\" \"pnpm run start:server\""
+        "dev:client": "pnpm --prefix client run dev",
+        "dev:server": "pnpm --prefix server run dev",
+        "dev:all": "concurrently \"pnpm run dev:client\" \"pnpm run dev:server\""
     },
     "devDependencies": {
         "concurrently": "^9.0.1"

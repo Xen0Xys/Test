@@ -15,8 +15,8 @@ import {Label} from "~/components/ui/label";
             <div class="relative w-full max-w-sm items-center">
                 <Input id="name" placeholder="Enter your name" label="Name" class="pl-10" autocomplete="off"/>
                 <span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
-                <Icon name="iconoir:user" class="size-6 text-muted-foreground"/>
-            </span>
+                    <Icon name="iconoir:user" class="size-6 text-muted-foreground"/>
+                </span>
             </div>
         </CardContent>
         <CardFooter class="flex justify-between gap-3">
