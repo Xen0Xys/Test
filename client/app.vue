@@ -6,7 +6,7 @@
 <script setup lang="ts">
 import type {VersionEntity} from "../server/src/common/models/entities/version.entity.js";
 
-const result = await useFetch("https://api.test.coolify.dotslash.fr/version");
+const result = await useFetch(process.env.API_URL + "/version");
 const version: VersionEntity = result.data.value;
 
 if(version)
