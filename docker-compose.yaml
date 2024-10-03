@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  front:
+  client:
     build:
       context: ./client
       dockerfile: Dockerfile
@@ -11,9 +11,9 @@ services:
     environment:
       - NODE_ENV=production
     depends_on:
-      - back
+      - server
 
-  back:
+  server:
     build:
       context: ./server
       dockerfile: Dockerfile
