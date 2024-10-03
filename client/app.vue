@@ -9,5 +9,8 @@ import type {VersionEntity} from "../server/src/common/models/entities/version.e
 const result = await useFetch("http://localhost:4000/version");
 const version: VersionEntity = result.data.value;
 
-console.log(version.version);
+if(version)
+    console.log(version.version);
+else
+    console.log(result.error);
 </script>
