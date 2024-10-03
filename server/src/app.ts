@@ -24,7 +24,7 @@ async function bootstrap(){
     await loadServer(httpApp);
     const port = process.env.PORT || 4000;
     await httpApp.listen(port, "0.0.0.0");
-    logger.log(`Listening on http://0.0.0.0${port}`);
+    logger.log(`Listening on http://0.0.0.0:${port}`);
 }
 
 async function loadServer(server: NestFastifyApplication){
