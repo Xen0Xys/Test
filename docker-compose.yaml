@@ -22,5 +22,5 @@ services:
     ports:
       - "4000:4000"
     environment:
-      - SERVICE_FQDN_CLIENT_4000
+      - SERVICE_FQDN_SERVER_4000
       - NODE_ENV=production
