@@ -4,6 +4,9 @@ LABEL authors="Xen0Xys"
 
 WORKDIR /app
 
+ARG PUBLIC_API_URL
+ENV PUBLIC_API_URL ${PUBLIC_API_URL}
+
 COPY . .
 
 RUN npm install -g pnpm && pnpm install
