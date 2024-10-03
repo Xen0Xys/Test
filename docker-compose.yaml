@@ -45,7 +45,7 @@ services:
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=db
     healthcheck:
-      test: [ "CMD", "pg_isready", "-U", "pg_user" ]
+      test: [ "CMD", "pg_isready", "-U", "user" ]
       interval: 5s
       timeout: 20s
       retries: 10
