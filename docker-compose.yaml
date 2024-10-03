@@ -9,6 +9,7 @@ services:
     ports:
       - "3000:3000"
     environment:
+      - SERVICE_FQDN_CLIENT_3000
       - NODE_ENV=production
     depends_on:
       - server
@@ -21,4 +22,5 @@ services:
     ports:
       - "4000:4000"
     environment:
+      - SERVICE_FQDN_CLIENT_3000
       - NODE_ENV=production
