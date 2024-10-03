@@ -24,3 +24,4 @@ services:
     environment:
       - SERVICE_FQDN_SERVER_4000
       - NODE_ENV=production
+      - DATABASE_URL=file:database.db
