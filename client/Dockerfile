@@ -4,8 +4,8 @@ LABEL authors="Xen0Xys"
 
 WORKDIR /app
 
-#ARG API_URL
-#ENV API_URL ${API_URL}
+ARG API_URL
+ENV API_URL ${API_URL}
 
 COPY . .
 

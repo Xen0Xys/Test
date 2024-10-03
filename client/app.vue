@@ -17,6 +17,4 @@ if(version)
     console.log(version.version);
 else
     console.log(result.error.value);
-
-console.log("Updated !");
 </script>
