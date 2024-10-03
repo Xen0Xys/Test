@@ -3,9 +3,9 @@ import {DropdownMenu} from "~/components/ui/dropdown-menu";
 
 const colorMode = useColorMode();
 const theme = computed(_ => {
-    switch (colorMode.preference) {
-        case 'system':
-            return window?.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
+    switch (colorMode.preference){
+        case "system":
+            return window?.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
         default:
             return colorMode.preference;
     }
@@ -16,8 +16,8 @@ const theme = computed(_ => {
     <DropdownMenu>
         <DropdownMenuTrigger>
             <ClientOnly>
-                <Icon name="iconoir:sun-light" v-if="theme === 'dark'" class="icon-style"/>
-                <Icon name="iconoir:half-moon" v-else-if="theme === 'light'" class="icon-style"/>
+                <Icon v-if="theme === 'dark'" name="iconoir:sun-light" class="icon-style"/>
+                <Icon v-else-if="theme === 'light'" name="iconoir:half-moon" class="icon-style"/>
             </ClientOnly>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
