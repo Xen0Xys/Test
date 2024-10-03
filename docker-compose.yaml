@@ -1,9 +1,5 @@
 version: '3.8'
 
-networks:
-  template-network:
-    driver: bridge
-
 services:
   client:
     build:
@@ -16,8 +12,6 @@ services:
       - NODE_ENV=production
     depends_on:
       - server
-    networks:
-      - template-network
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:3000" ]
       interval: 30s
@@ -34,8 +28,6 @@ services:
     environment:
       - NODE_ENV=production
       - DATABASE_URL=file:database.db
-    networks:
-      - template-network
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:4000/version" ]
       interval: 30s
