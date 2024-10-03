@@ -17,4 +17,4 @@ RUN npx prisma generate
 
 EXPOSE 4000
 
-CMD npx prisma migrate deploy && npx prisma db seed && npx start
+CMD npx prisma migrate deploy && npx prisma db seed && pnpm run start
