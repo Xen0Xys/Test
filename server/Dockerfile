@@ -13,8 +13,8 @@ COPY . .
 
 RUN npm install -g pnpm && pnpm install
 
-RUN pnpx prisma generate
+RUN pnpm dlx prisma generate
 
 EXPOSE 4000
 
-CMD pnpx prisma migrate deploy && pnpx prisma db seed && pnpm start
+CMD pnpm dlx prisma migrate deploy && npx prisma db seed && pnpm dlx start
