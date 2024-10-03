@@ -3,7 +3,7 @@ version: '3.8'
 services:
   front:
     build:
-      context: ./front
+      context: ./client
       dockerfile: Dockerfile
     container_name: nuxt-app
     ports:
@@ -15,7 +15,7 @@ services:
 
   back:
     build:
-      context: ./back
+      context: ./server
       dockerfile: Dockerfile
     container_name: nest-app
     ports:
