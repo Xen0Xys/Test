@@ -13,8 +13,8 @@ COPY . .
 
 RUN npm install -g pnpm && pnpm install
 
-RUN pnpm exec prisma generate
+RUN npx prisma generate
 
 EXPOSE 4000
 
-CMD pnpm exec prisma migrate deploy && npx prisma db seed && pnpm exec start
+CMD npx prisma migrate deploy && npx prisma db seed && npx start
