@@ -1,5 +1,9 @@
 version: '3.8'
 
+networks:
+  template-network:
+    driver: bridge
+
 services:
   client:
     build:
@@ -9,10 +13,11 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - SERVICE_FQDN_CLIENT_3000
       - NODE_ENV=production
     depends_on:
       - server
+    networks:
+      - template-network
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:3000" ]
       interval: 30s
@@ -27,25 +32,12 @@ services:
     ports:
       - "4000:4000"
     environment:
-      - SERVICE_FQDN_SERVER_4000
       - NODE_ENV=production
       - DATABASE_URL=file:database.db
+    networks:
+      - template-network
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:4000/version" ]
       interval: 30s
       timeout: 10s
       retries: 3
-
-  database:
-    image: postgres:17
-    volumes:
-      - pg_data:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_USER=user
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=db
-    healthcheck:
-      test: [ "CMD", "pg_isready", "-U", "user" ]
-      interval: 5s
-      timeout: 20s
-      retries: 10
