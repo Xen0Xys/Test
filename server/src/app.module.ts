@@ -8,10 +8,12 @@ import {ScheduleModule} from "@nestjs/schedule";
 import {ConfigModule} from "@nestjs/config";
 import {Module} from "@nestjs/common";
 import * as dotenv from "dotenv";
+import {AppController} from "./app.controller";
 
 dotenv.config();
 
 @Module({
+    controllers: [AppController],
     imports: [
         ConfigModule.forRoot({isGlobal: true}),
         ScheduleModule.forRoot(),
