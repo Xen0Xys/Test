@@ -6,7 +6,7 @@
 <script setup lang="ts">
 import type {VersionEntity} from "../server/src/common/models/entities/version.entity.js";
 
-const result = await useFetch("http://172.17.0.1:4000/version");
+const result = await useFetch("http://nest-app:4000/version");
 const version: VersionEntity = result.data.value;
 
 if(version)
