@@ -30,6 +30,8 @@ services:
     environment:
       - NODE_ENV=production
       - DATABASE_URL=${DATABASE_URL:-postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST:-postgres}:${POSTGRES_PORT}/${POSTGRES_DB}}
+    depends_on:
+      - postgres
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:4000/version" ]
       interval: 30s
