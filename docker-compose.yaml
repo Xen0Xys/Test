@@ -29,7 +29,7 @@ services:
       - "4000:4000"
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=${DATABASE_URL:-postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST:-postgres}:${POSTGRES_PORT}/${POSTGRES_DB}}
+      - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST:-postgres}:${POSTGRES_PORT}/${POSTGRES_DB}
     depends_on:
       - postgres
     healthcheck:
