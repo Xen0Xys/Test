@@ -149,8 +149,8 @@ importers:
         version: 10.0.0
     devDependencies:
       '@eslint/js':
-        specifier: ^9.9.0
-        version: 9.11.1
+        specifier: ^9.12.0
+        version: 9.12.0
       '@nestjs/cli':
         specifier: ^10.4.4
         version: 10.4.5
@@ -1009,6 +1009,10 @@ packages:
 
   '@eslint/js@9.11.1':
     resolution: {integrity: sha512-/qu+TWz8WwPWc7/HcIJKi+c+MOm46GdVaSlTTQcaqaL53+GsoA6MxWp5PtTx48qbSP7ylM1Kn7nhvkugfJvRSA==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@eslint/js@9.12.0':
+    resolution: {integrity: sha512-eohesHH8WFRUprDNyEREgqP6beG6htMeUYeCpkEgBCieCMme5r9zFWjzAJp//9S+Kub4rqE+jXe9Cp1a7IYIIA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/object-schema@2.1.4':
@@ -7652,6 +7656,8 @@ snapshots:
 
   '@eslint/js@9.11.1': {}
 
+  '@eslint/js@9.12.0': {}
+
   '@eslint/object-schema@2.1.4': {}
 
   '@eslint/plugin-kit@0.2.0':
@@ -8300,7 +8306,7 @@ snapshots:
 
   '@nuxt/eslint-config@0.3.13(eslint@9.11.1(jiti@2.1.0))(typescript@5.6.2)':
     dependencies:
-      '@eslint/js': 9.11.1
+      '@eslint/js': 9.12.0
       '@nuxt/eslint-plugin': 0.3.13(eslint@9.11.1(jiti@2.1.0))(typescript@5.6.2)
       '@rushstack/eslint-patch': 1.10.4
       '@stylistic/eslint-plugin': 2.8.0(eslint@9.11.1(jiti@2.1.0))(typescript@5.6.2)
