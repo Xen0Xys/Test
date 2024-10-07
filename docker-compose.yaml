@@ -6,7 +6,7 @@ services:
       context: ./client
       dockerfile: Dockerfile
       args:
-        API_URL: ${API_URL:?}
+        API_URL: http://server:4000
     container_name: nuxt-app
     ports:
       - "3000:3000"
