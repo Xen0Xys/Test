@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
       args:
         API_URL: http://server:4000
-    container_name: nuxt-app
+    container_name: template-client
     ports:
       - "3000:3000"
     environment:
@@ -24,7 +24,7 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    container_name: nest-app
+    container_name: template-server
     ports:
       - "4000:4000"
     environment:
