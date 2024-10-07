@@ -39,5 +39,5 @@ jobs:
           file: ./client/Dockerfile
           push: true
           tags: xen0xys/template-app:latest
-          build-args:
-            API_URL: http://server:4000
+          build-args: |
+            API_URL=http://server:4000
