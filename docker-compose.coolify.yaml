@@ -11,8 +11,8 @@ services:
     expose:
       - 3000
     environment:
-      - SERVICE_FQDN_CLIENT_3000
       - NODE_ENV=production
+      - SERVICE_FQDN_CLIENT_3000
     depends_on:
       - server
     healthcheck:
