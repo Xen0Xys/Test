@@ -1,17 +1,15 @@
-FROM node:21
-
-LABEL authors="Xen0Xys"
+FROM node:21-alpine
 
 WORKDIR /app
 
 ARG API_URL
 ENV API_URL ${API_URL}
 
+COPY package.json pnpm-lock.yaml ./
+
+RUN npm install -g pnpm && pnpm install && pnpm run build
+
 COPY . .
-
-RUN npm install -g pnpm && pnpm install
-
-RUN pnpm run build
 
 EXPOSE 3000
 

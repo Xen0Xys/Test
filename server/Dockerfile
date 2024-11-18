@@ -1,20 +1,19 @@
-FROM node:21
-
-LABEL authors="Xen0Xys"
+FROM node:21-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package*.json pnpm-lock.yaml ./
+COPY tsconfig.json ./
 COPY prisma ./prisma/
 
-COPY tsconfig.json ./
+RUN npm install -g pnpm && pnpm install --frozen-lockfile
 
 COPY . .
 
-RUN npm install -g pnpm && pnpm install
+ENV NODE_ENV=production
 
-RUN npx prisma generate
+RUN pnpm dlx prisma generate && pnpm run build
 
 EXPOSE 4000
 
-CMD npx prisma migrate deploy && npx prisma db seed && pnpm run start
+CMD pnpm dlx prisma migrate deploy && npx prisma db seed && pnpm run start:prod
