@@ -12,7 +12,7 @@ services:
       - 3000
     environment:
       - NODE_ENV=production
-      - SERVICE_FQDN_CLIENT_3000
+#      - SERVICE_FQDN_CLIENT_3000
     depends_on:
       - server
     healthcheck:
