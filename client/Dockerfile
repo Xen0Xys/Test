@@ -5,7 +5,7 @@ WORKDIR /app
 ARG API_URL
 ENV API_URL ${API_URL}
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json ./
 
 RUN npm install -g pnpm && pnpm install && pnpm run build
 
