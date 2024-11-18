@@ -2,7 +2,7 @@ FROM node:21-alpine
 
 WORKDIR /app
 
-COPY package*.json pnpm-lock.yaml ./
+COPY package*.json ./
 COPY tsconfig.json ./
 COPY prisma ./prisma/
 
