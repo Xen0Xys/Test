@@ -26,8 +26,8 @@ services:
       context: ./server
       dockerfile: Dockerfile
     container_name: template-server
-    expose:
-      - 4000
+    ports:
+      - "4000:4000"
     environment:
       - NODE_ENV=production
       - DATABASE_URL=postgres://postgres:${SERVICE_PASSWORD_SERVER}@postgres:5432/postgres
