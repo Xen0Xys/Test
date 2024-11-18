@@ -8,7 +8,7 @@ import {Label} from "~/components/ui/label";
     <Card class="w-[350px]">
         <CardHeader>
             <CardTitle>Card Title</CardTitle>
-            <CardDescription>This is the card description 5</CardDescription>
+            <CardDescription>This is the card description</CardDescription>
         </CardHeader>
         <CardContent>
             <Label for="name">Name</Label>
