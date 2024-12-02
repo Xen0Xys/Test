@@ -12,7 +12,7 @@
     "lint:fix": "eslint --fix ."
   },
   "dependencies": {
-    "@nuxt/eslint": "^0.3.13",
+    "@nuxt/eslint": "^0.7.2",
     "@nuxtjs/color-mode": "^3.5.2",
     "@vueuse/core": "^10.11.1",
     "class-variance-authority": "^0.7.0",
